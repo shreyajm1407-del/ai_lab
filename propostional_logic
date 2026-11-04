@@ -1,0 +1,11 @@
+def propositional_logic(P, Q):
+    print("P AND Q:", P and Q)
+    print("P OR Q:", P or Q)
+    print("NOT P:", not P)
+    print("P IMPLIES Q:", (not P) or Q)
+
+
+P = True
+Q = False
+
+propositional_logic(P, Q)
