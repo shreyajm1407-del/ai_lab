@@ -1,0 +1,38 @@
+def hill_climbing(graph, values, start):
+    current = start
+
+    while True:
+        best = current
+
+        for neighbour in graph[current]:
+            if values[neighbour] > values[best]:
+                best = neighbour
+
+        if best == current:
+            break
+
+        current = best
+
+    return current
+
+r
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D'],
+    'C': ['E'],
+    'D': [],
+    'E': []
+}
+
+values = {
+    'A': 2,
+    'B': 5,
+    'C': 3,
+    'D': 8,
+    'E': 6
+}
+
+result = hill_climbing(graph, values, 'A')
+
+print("Best State:", result)
+print("Maximum Value:", values[result])
